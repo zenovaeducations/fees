@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>BEST International PU College | Office Fees</title>
+
+    <link rel="stylesheet" href="officefees.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
+
+<div id="accessScreen" class="access-screen">
+
+    <div class="access-card">
+
+        <div class="access-logos">
+
+            <img
+                src="best.jpg"
+                alt="BEST International PU College">
+
+            <img
+                src="zen.jpg"
+                alt="Zenova Educations">
+
+        </div>
+
+
+        <div class="lock-icon">
+
+            <i class="ri-lock-2-line"></i>
+
+        </div>
+
+
+        <span class="portal-label">
+            OFFICE PORTAL
+        </span>
+
+        <h1>
+            Fees Management
+        </h1>
+
+        <p>
+            Enter the office password to continue.
+        </p>
+
+
+        <div class="password-box">
+
+            <i class="ri-key-2-line"></i>
+
+            <input
+                type="password"
+                id="officePassword"
+                placeholder="Enter password"
+                autocomplete="off">
+
+            <button
+                type="button"
+                id="togglePassword">
+
+                <i class="ri-eye-line"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="accessError"
+            class="access-error">
+        </div>
+
+
+        <button
+            type="button"
+            id="unlockButton"
+            class="primary-button">
+
+            <i class="ri-login-box-line"></i>
+
+            Enter Office Portal
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     OFFICE PORTAL
+===================================================== -->
+
+<div
+    id="officePortal"
+    class="office-portal"
+    style="display:none;">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <header class="top-header">
+
+
+        <!-- BEST -->
+
+        <div class="college-brand left-brand">
+
+            <img
+                src="best.jpg"
+                alt="BEST International PU College">
+
+            <div>
+
+                <strong>
+                    BEST INTERNATIONAL
+                </strong>
+
+                <span>
+                    PU COLLEGE
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CENTER -->
+
+        <div class="header-center">
+
+            <span>
+                INTEGRATED WITH
+            </span>
+
+            <strong>
+                OFFICE FEES PORTAL
+            </strong>
+
+        </div>
+
+
+
+        <!-- ZENOVA -->
+
+        <div class="college-brand right-brand">
+
+            <div>
+
+                <strong>
+                    ZENOVA
+                </strong>
+
+                <span>
+                    EDUCATIONS
+                </span>
+
+            </div>
+
+            <img
+                src="zen.jpg"
+                alt="Zenova Educations">
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         MAIN
+    ================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- PAGE HEADING -->
+
+        <section class="page-heading">
+
+            <span>
+                BEST INTERNATIONAL PU COLLEGE
+            </span>
+
+            <h1>
+                Office Fees
+            </h1>
+
+            <p>
+                Manage official student fee records.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STUDENT LIST VIEW
+        ================================================== -->
+
+        <section
+            id="studentView"
+            class="student-view">
+
+
+            <div class="section-card">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span>
+                            STUDENTS
+                        </span>
+
+                        <h2>
+                            All Students
+                        </h2>
+
+                    </div>
+
+
+                    <div class="student-total">
+
+                        <strong id="studentCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Students
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <i class="ri-search-line"></i>
+
+                    <input
+                        type="text"
+                        id="studentSearch"
+                        placeholder="Search student..."
+                        autocomplete="off">
+
+                </div>
+
+
+
+                <!-- STUDENTS -->
+
+                <div
+                    id="studentResults"
+                    class="student-results">
+
+                    <div class="loading">
+
+                        <i class="ri-loader-4-line"></i>
+
+                        Loading students...
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STUDENT FEE VIEW
+        ================================================== -->
+
+        <section
+            id="feeView"
+            class="fee-view"
+            style="display:none;">
+
+
+            <!-- BACK -->
+
+            <button
+                type="button"
+                id="backButton"
+                class="back-button">
+
+                <i class="ri-arrow-left-line"></i>
+
+                Back to Students
+
+            </button>
+
+
+
+            <!-- STUDENT CARD -->
+
+            <div class="selected-card">
+
+
+                <div class="selected-top">
+
+                    <div class="avatar">
+
+                        <i class="ri-user-3-line"></i>
+
+                    </div>
+
+
+                    <div class="selected-name">
+
+                        <span>
+                            STUDENT
+                        </span>
+
+                        <h2 id="selectedName">
+                            —
+                        </h2>
+
+                        <p id="selectedContact">
+                            —
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="lockStatus"
+                        class="lock-status">
+
+                        <i class="ri-lock-fill"></i>
+
+                        LOCKED
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="student-info-grid">
+
+                    <div>
+
+                        <span>
+                            CLASS
+                        </span>
+
+                        <strong id="selectedClass">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            COURSE
+                        </span>
+
+                        <strong id="selectedCourse">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            COMBINATION
+                        </span>
+
+                        <strong id="selectedCombination">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FEE CARD -->
+
+            <div class="fee-card">
+
+
+                <div class="fee-heading">
+
+                    <div>
+
+                        <span>
+                            OFFICIAL RECORD
+                        </span>
+
+                        <h2>
+                            Fee Details
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="editFeesButton"
+                        class="edit-button"
+                        style="display:none;">
+
+                        <i class="ri-edit-line"></i>
+
+                        Edit Fees
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- LOCKED MESSAGE -->
+
+                <div
+                    id="lockedMessage"
+                    class="locked-message">
+
+                    <i class="ri-shield-check-line"></i>
+
+                    <div>
+
+                        <strong>
+                            Official Record
+                        </strong>
+
+                        <p>
+                            This fee record has been saved.
+                            Click Edit Fees if a correction is required.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ADVANCE
+                ================================================== -->
+
+                <div class="fee-row">
+
+
+                    <div class="fee-number">
+                        01
+                    </div>
+
+
+                    <div class="fee-name">
+
+                        <strong>
+                            Advance Paid
+                        </strong>
+
+                        <span>
+                            Paid during admission
+                        </span>
+
+                    </div>
+
+
+                    <div class="fee-input-area">
+
+                        <div class="amount-box">
+
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="advanceAmount"
+                                min="0"
+                                placeholder="0"
+                                disabled>
+
+                        </div>
+
+
+                        <input
+                            type="date"
+                            id="advanceDate"
+                            disabled>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FIRST
+                ================================================== -->
+
+                <div class="fee-row">
+
+
+                    <div class="fee-number">
+                        02
+                    </div>
+
+
+                    <div class="fee-name">
+
+                        <strong>
+                            1st Installment
+                        </strong>
+
+                        <span>
+                            First installment
+                        </span>
+
+                    </div>
+
+
+                    <div class="fee-input-area">
+
+                        <div class="amount-box">
+
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="firstAmount"
+                                min="0"
+                                placeholder="0"
+                                disabled>
+
+                        </div>
+
+
+                        <input
+                            type="date"
+                            id="firstDate"
+                            disabled>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SECOND
+                ================================================== -->
+
+                <div class="fee-row">
+
+
+                    <div class="fee-number">
+                        03
+                    </div>
+
+
+                    <div class="fee-name">
+
+                        <strong>
+                            2nd Installment
+                        </strong>
+
+                        <span>
+                            Second installment
+                        </span>
+
+                    </div>
+
+
+                    <div class="fee-input-area">
+
+                        <div class="amount-box">
+
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="secondAmount"
+                                min="0"
+                                placeholder="0"
+                                disabled>
+
+                        </div>
+
+
+                        <input
+                            type="date"
+                            id="secondDate"
+                            disabled>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TOTAL -->
+
+                <div class="total-box">
+
+                    <span>
+                        TOTAL OFFICIAL FEE PAID
+                    </span>
+
+                    <strong id="totalFee">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+
+                <!-- SAVE CHANGES -->
+
+                <button
+                    type="button"
+                    id="saveChangesButton"
+                    class="save-button"
+                    style="display:none;">
+
+                    <i class="ri-save-3-line"></i>
+
+                    Save Changes
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="cancelEditButton"
+                    class="cancel-button"
+                    style="display:none;">
+
+                    Cancel
+
+                </button>
+
+
+                <p class="record-note">
+
+                    <i class="ri-information-line"></i>
+
+                    Office record only. Student-submitted fee details
+                    are not changed.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<script
+    type="module"
+    src="officefees.js">
+</script>
+
+</body>
+
+</html>
